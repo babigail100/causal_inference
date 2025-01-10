@@ -5,7 +5,11 @@ format: gfm
 
 ## Description
 
-These are all the files for my project.
+Goal: 
+
+Dataset:
+
+Techniques:
 
 ## Project Organization
 

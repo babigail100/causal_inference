@@ -1,31 +1,151 @@
-# The Effect of Exercise on Mental Health
-
+# The Impact of Exercise on Depression and Anxiety
+Abby Brown
 
 ## Description
 
-Fundamental Question: Does regular exercise reduce symptoms of depression and anxiety in individuals diagnosed with mental health conditions?
+### Fundamental Question:
 
-Hypothesis: Engaging in regular physical exercise leads to lower levels of depression and anxiety.
+Does regular exercise reduce symptoms of depression and anxiety in
+individuals diagnosed with mental health conditions?
 
-Data:
-- Primary variables: depression/anxiety scores, exercise frequency, exercise duration, exercise intensity
-- Covariates: age, gender, baseline mental health, socioeconomic status, physical health conditions, medication use, therapy involvement
-- Potential sources: NHANES, BRFSS, open database studies from OpenICPSR, Kaggle, MIMIC-IV, etc
+### Hypothesis:
 
-Methods to Explore:
-- Directed acyclic graph
-- Control for confounding variables (age, pre-existing conditions, socioeconomic status, etc)
-- Propensity score matching
-- Difference-in-differences (compare mental health outcomes before/after starting exercise for participants vs non-partipants)--dependent on data available
-- Logistic/linear regression
-- Bayesian methods to model uncertainty and handle hierarchical structures such as varying effects by demographics
+Engaging in regular physical exercise leads to lower levels of
+depression and anxiety.
 
-Challenges:
-- Data availability may present limitations
-- Not all confounding variables may be identified and/or adjusted for, and a high number of observed confounders may be difficult to control
-- Self-reported data isn't always reliable (recall, social desirability)
-- Potential data imbalance in age, income, etc.
-- Different types of exercise might have different effects on mental health
+### Introduction:
+
+Mental health challenges are among the leading causes of workplace
+absenteeism and reduced productivity globally, costing businesses
+billions annually in lost output. Amid rising awareness of employee
+well-being, companies are investing in wellness programs, including
+fitness initiatives, with the expectation of improving employee mental
+health and productivity.
+
+This study aims to explore the causal relationship between regular
+exercise and mental health outcomes, focusing on depression and anxiety.
+The findings could provide actionable insights for businesses aiming to
+design effective wellness programs, as well as inform policymakers about
+the broader benefits of promoting physical activity.
+
+### Variables and Data:
+
+#### Primary variables:
+
+These variables focus on quantifying mental health outcomes and exercise
+behavior - **Mental health outcomes**: depression/anxiety scores \|
+Depression and anxiety are primary indicators of mental health.
+Validated scales such as the PHQ-9 (Patient Health Questionnaire) and
+GAD-7 (Generalized Anxiety Disorder Assessment) provide reliable, widely
+accepted metrics for assessing the severity of these conditions. -
+**Exercise behavior**: Frequency, duration, and intensity of physical
+activity all offer unique insights in the relationship between exercise
+and mental health outcomes: - **Frequency**: Captures the consistency of
+exercise routines, which is hypothesized to influence mental health
+positively over time. - **Duration**: Measures the amount of time spent
+exercising per session, which alters the efficacy of physical
+activity. - **Intensity**: Differentiates between light, moderate, and
+vigorous exercise, as varying intensities may result in different
+psychological effects.
+
+#### Covariates:
+
+We will account for potential confounders that could influence both
+mental health and exercise habits - **Demographics**: Age, gender,
+socioeconomic status - **Baseline health**: Pre-existing physical and
+mental health conditions, including baseline depression/anxiety scores -
+**Treatment factors**: Use of medications, involvement in therapy
+
+- **Demographics**:
+  - **Age**: Physical activity levels and mental health challenges often
+    vary by age.
+  - **Gender**: Exercise preferences and mental health prevalence can
+    differ significantly between genders.
+  - **Socioeconomic status (SES)**: SES can influence access to exercise
+    resources (e.g., gym memberships, time) and mental health support.
+- **Baseline health**:
+  - **Pre-existing conditions**: Physical limitations or chronic
+    illnesses may affect mental health or the ability to exercise.
+  - **Baseline depression/anxiety scores**: Controlling for initial
+    mental health levels ensures that observed changes are attributable
+    to exercise.
+- **Treatment factors**:
+  - **Medication use**: Antidepressants or anxiolytics may interact with
+    exercise effects on mental health.
+  - **Therapy involvement**: Participation in therapy could amplify or
+    obscure the effects of exercise.
+
+#### Potential data sources:
+
+- National databases (NHANES, BRFSS)
+- Open datasets (OpenICPSR, Kaggle)
+- Clinical datasets (MIMIC-IV)
+
+### Methods to Explore:
+
+1.  **Directed Acyclic Graphs (DAGs)**  
+    Identify confounding variables and clarify the assumed causal
+    structure
+
+2.  **Propensity Score Matching**  
+    Match individuals with similar baseline characteristics to isolate
+    the effect of exercise
+
+3.  **Difference-in-Differences (DiD)**  
+    Compare mental health outcomes before and after individuals begin
+    exercising
+
+4.  **Regression Models**
+
+    - **Linear regression** for continuous outcomes (e.g., depression
+      scores)
+    - **Logistic regression** for binary outcomes (e.g., presence or
+      absence of clinical depression)
+
+5.  **Bayesian Analysis**  
+    Handle uncertainty in parameter estimates and incorporate
+    hierarchical structures to assess varying effects across demographic
+    groups
+
+### Challenges:
+
+#### Data Availability
+
+- **Challenge**: Access to high-quality longitudinal datasets may be
+  limited.  
+- **Strategy**: Utilize widely available public health datasets and
+  focus on data preprocessing and validation.
+
+#### Confounding Variables
+
+- **Challenge**: Not all confounders may be identified and/or adjusted
+  for, and too many covariates may increase model complexity.  
+- **Strategy**: Use DAGs to prioritize key confounders and sensitivity
+  analyses to assess the impact of omitted variables.
+
+#### Self-Reported Data
+
+- **Challenge**: Exercise frequency and mental health outcome responses
+  may be subject to recall errors or social desirability bias.  
+- **Strategy**: Supplement self-reported data with objective measures
+  (e.g., wearable device data) if available and quantify measurement
+  error in models.
+
+#### Data Imbalance
+
+- **Challenge**: Unequal representation across demographic groups could
+  bias results.
+- **Strategy**: Apply weighting or oversampling techniques to address
+  imbalance and perform subgroup analyses to explore heterogeneous
+  effects.
+
+#### Variability in Exercise Types
+
+- **Challenge**: Different exercise types (e.g., aerobic vs. resistance
+  training) might have distinct effects on mental health, complicating
+  interpretation.  
+- **Strategy**: Group exercise types into broad categories or focus on
+  the most commonly reported type in the dataset.
 
 ## Project Organization
 

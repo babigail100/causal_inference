@@ -32,29 +32,28 @@ the broader benefits of promoting physical activity.
 
 #### Primary variables:
 
-These variables focus on quantifying mental health outcomes and exercise
-behavior - **Mental health outcomes**: depression/anxiety scores \|
-Depression and anxiety are primary indicators of mental health.
-Validated scales such as the PHQ-9 (Patient Health Questionnaire) and
-GAD-7 (Generalized Anxiety Disorder Assessment) provide reliable, widely
-accepted metrics for assessing the severity of these conditions. -
-**Exercise behavior**: Frequency, duration, and intensity of physical
-activity all offer unique insights in the relationship between exercise
-and mental health outcomes: - **Frequency**: Captures the consistency of
-exercise routines, which is hypothesized to influence mental health
-positively over time. - **Duration**: Measures the amount of time spent
-exercising per session, which alters the efficacy of physical
-activity. - **Intensity**: Differentiates between light, moderate, and
-vigorous exercise, as varying intensities may result in different
-psychological effects.
+These variables focus on quantifying mental health outcomes and exercise behavior
+
+- **Mental health outcomes**: depression/anxiety scores \| Depression
+  and anxiety are primary indicators of mental health. Validated scales
+  such as the PHQ-9 (Patient Health Questionnaire) and GAD-7
+  (Generalized Anxiety Disorder Assessment) provide reliable, widely
+  accepted metrics for assessing the severity of these conditions.
+- **Exercise behavior**: Frequency, duration, and intensity of physical
+  activity all offer unique insights in the relationship between
+  exercise and mental health outcomes:
+  - **Frequency**: Captures the consistency of exercise routines, which
+    is hypothesized to influence mental health positively over time.
+  - **Duration**: Measures the amount of time spent exercising per
+    session, which alters the efficacy of physical activity.
+  - **Intensity**: Differentiates between light, moderate, and vigorous
+    exercise, as varying intensities may result in different
+    psychological effects.
 
 #### Covariates:
 
 We will account for potential confounders that could influence both
-mental health and exercise habits - **Demographics**: Age, gender,
-socioeconomic status - **Baseline health**: Pre-existing physical and
-mental health conditions, including baseline depression/anxiety scores -
-**Treatment factors**: Use of medications, involvement in therapy
+mental health and exercise habits
 
 - **Demographics**:
   - **Age**: Physical activity levels and mental health challenges often

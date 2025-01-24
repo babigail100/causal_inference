@@ -96,6 +96,13 @@ We will account for potential confounders that could influence both mental healt
 - **Challenge**: Different exercise types (e.g., aerobic vs. resistance training) might have distinct effects on mental health, complicating interpretation.  
 - **Strategy**: Group exercise types into broad categories or focus on the most commonly reported type in the dataset.
 
+### Directed Acyclic Graph (DAG)
+
+The following DAG illustrates the hypothesized causal relationships in the study:
+
+```{r fig.cap="Directed Acyclic Graph of Exercise and Mental Health Outcomes"}
+![DAG of Exercise and Mental Health](figures/MHdag.png)
+
 
 ## Project Organization
 

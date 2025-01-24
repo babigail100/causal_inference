@@ -32,7 +32,8 @@ the broader benefits of promoting physical activity.
 
 #### Primary variables:
 
-These variables focus on quantifying mental health outcomes and exercise behavior
+These variables focus on quantifying mental health outcomes and exercise
+behavior
 
 - **Mental health outcomes**: depression/anxiety scores \| Depression
   and anxiety are primary indicators of mental health. Validated scales
@@ -145,6 +146,13 @@ mental health and exercise habits
   interpretation.  
 - **Strategy**: Group exercise types into broad categories or focus on
   the most commonly reported type in the dataset.
+
+### Directed Acyclic Graph (DAG)
+
+The following DAG illustrates the hypothesized causal relationships in
+the study:
+
+![DAG of Exercise and Mental Health](figures/MHdag.png)
 
 ## Project Organization
 

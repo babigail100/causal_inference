@@ -33,6 +33,19 @@ nx.draw(dag, pos, with_labels=True, node_size=3000, node_color="lightblue", font
 plt.show()
 
 
+# plt.savefig("MHdag.png", format="png", dpi=300)
 
 
-plt.savefig("MHdag.png", format="png", dpi=300)
+undirected_dag = dag.to_undirected()
+
+paths = list(nx.all_simple_paths(undirected_dag, source="Exercise", target="Depression/Anxiety"))
+
+for path in paths:
+    formatted_path = []
+    for i in range(len(path) - 1):
+        if dag.has_edge(path[i], path[i + 1]): 
+            formatted_path.append(f"{path[i]} →")
+        else:  # Backward direction
+            formatted_path.append(f"{path[i]} ←")
+    formatted_path.append(path[-1]) 
+    print(" ".join(formatted_path))

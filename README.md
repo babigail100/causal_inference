@@ -154,6 +154,126 @@ the study:
 
 ![DAG of Exercise and Mental Health](figures/MHdag.png)
 
+Here are all paths connecting Exercise to Depression/Anxiety:
+
+Exercise → Depression/Anxiety
+
+Exercise ← Age → Depression/Anxiety
+
+Exercise ← Age → Conditions ← Gender → Depression/Anxiety
+
+Exercise ← Age → Conditions ← Gender → Genetic Predisposition →
+Depression/Anxiety
+
+Exercise ← Age → Conditions → Depression/Anxiety
+
+Exercise ← Age → Conditions → Medication ← SES → Depression/Anxiety
+
+Exercise ← Age → Conditions → Medication ← SES → Therapy →
+Depression/Anxiety
+
+Exercise ← Age → Conditions → Medication ← Therapy ← SES →
+Depression/Anxiety
+
+Exercise ← Age → Conditions → Medication ← Therapy → Depression/Anxiety
+
+Exercise ← Age → Conditions → Medication → Depression/Anxiety
+
+Exercise ← Age → Conditions → Therapy ← SES → Depression/Anxiety
+
+Exercise ← Age → Conditions → Therapy ← SES → Medication →
+Depression/Anxiety
+
+Exercise ← Age → Conditions → Therapy → Depression/Anxiety
+
+Exercise ← Age → Conditions → Therapy → Medication ← SES →
+Depression/Anxiety
+
+Exercise ← Age → Conditions → Therapy → Medication → Depression/Anxiety
+
+Exercise ← SES → Depression/Anxiety
+
+Exercise ← SES → Medication ← Conditions ← Age → Depression/Anxiety
+
+Exercise ← SES → Medication ← Conditions ← Gender → Depression/Anxiety
+
+Exercise ← SES → Medication ← Conditions ← Gender → Genetic
+Predisposition → Depression/Anxiety
+
+Exercise ← SES → Medication ← Conditions → Depression/Anxiety
+
+Exercise ← SES → Medication ← Conditions → Therapy → Depression/Anxiety
+
+Exercise ← SES → Medication ← Therapy ← Conditions ← Age →
+Depression/Anxiety
+
+Exercise ← SES → Medication ← Therapy ← Conditions ← Gender →
+Depression/Anxiety
+
+Exercise ← SES → Medication ← Therapy ← Conditions ← Gender → Genetic
+Predisposition → Depression/Anxiety
+
+Exercise ← SES → Medication ← Therapy ← Conditions → Depression/Anxiety
+
+Exercise ← SES → Medication ← Therapy → Depression/Anxiety
+
+Exercise ← SES → Medication → Depression/Anxiety
+
+Exercise ← SES → Therapy ← Conditions ← Age → Depression/Anxiety
+
+Exercise ← SES → Therapy ← Conditions ← Gender → Depression/Anxiety
+
+Exercise ← SES → Therapy ← Conditions ← Gender → Genetic Predisposition
+→ Depression/Anxiety
+
+Exercise ← SES → Therapy ← Conditions → Depression/Anxiety
+
+Exercise ← SES → Therapy ← Conditions → Medication → Depression/Anxiety
+
+Exercise ← SES → Therapy → Depression/Anxiety
+
+Exercise ← SES → Therapy → Medication ← Conditions ← Age →
+Depression/Anxiety
+
+Exercise ← SES → Therapy → Medication ← Conditions ← Gender →
+Depression/Anxiety
+
+Exercise ← SES → Therapy → Medication ← Conditions ← Gender → Genetic
+Predisposition → Depression/Anxiety
+
+Exercise ← SES → Therapy → Medication ← Conditions → Depression/Anxiety
+
+Exercise ← SES → Therapy → Medication → Depression/Anxiety
+
+Exercise ← Conditions ← Age → Depression/Anxiety
+
+Exercise ← Conditions ← Gender → Depression/Anxiety
+
+Exercise ← Conditions ← Gender → Genetic Predisposition →
+Depression/Anxiety
+
+Exercise ← Conditions → Depression/Anxiety
+
+Exercise ← Conditions → Medication ← SES → Depression/Anxiety
+
+Exercise ← Conditions → Medication ← SES → Therapy → Depression/Anxiety
+
+Exercise ← Conditions → Medication ← Therapy ← SES → Depression/Anxiety
+
+Exercise ← Conditions → Medication ← Therapy → Depression/Anxiety
+
+Exercise ← Conditions → Medication → Depression/Anxiety
+
+Exercise ← Conditions → Therapy ← SES → Depression/Anxiety
+
+Exercise ← Conditions → Therapy ← SES → Medication → Depression/Anxiety
+
+Exercise ← Conditions → Therapy → Depression/Anxiety
+
+Exercise ← Conditions → Therapy → Medication ← SES → Depression/Anxiety
+
+Exercise ← Conditions → Therapy → Medication → Depression/Anxiety
+
 ## Project Organization
 
 - `/code` Scripts with prefixes (e.g., `01_import-data.py`,

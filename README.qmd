@@ -103,7 +103,7 @@ The following DAG illustrates the hypothesized causal relationships in the study
 ![DAG of Exercise and Mental Health](figures/MHdag.png)
 
 
-Here are all paths connecting Exercise to Depression/Anxiety:
+#### Here are all paths connecting Exercise to Depression/Anxiety:
 
 Exercise → Depression/Anxiety
 
@@ -208,6 +208,25 @@ Exercise ← Conditions → Therapy → Depression/Anxiety
 Exercise ← Conditions → Therapy → Medication ← SES → Depression/Anxiety
 
 Exercise ← Conditions → Therapy → Medication → Depression/Anxiety
+
+
+#### Based on these paths, we can determine the following:
+
+- **Age**: ADJUST; affects exercise and depression/anxiety via multiple paths and appears as a common cause 
+
+- **Gender**: ADJUST; affects exercise and depression/anxiety via multiple paths and appears as a common cause via a pipe
+
+- **SES**: ADJUST; common cause of both exercise and depression/anxiety
+
+- **Pre-existing Conditions**: ADJUST; common cause of both exercise and depression/anxiety
+
+- **Therapy**: DO NOT adjust; collider in paths like Conditions → Therapy ← SES; adjusting would open an unintended path
+
+- **Medication**: DO NOT adjust; collider in paths like Conditions → Medication ← SES; adjusting would open an unintended path
+
+- **Genetic Predisposition**: DO NOT adjust; collider in paths like Gender → Genetic Predisposition ← Depression/Anxiety; adjusting would open an unintended path
+
+#### Final Adjustment Set: { Age, Gender, SES, Pre-existing Conditions }
 
 
 ## Project Organization

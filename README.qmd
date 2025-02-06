@@ -100,8 +100,133 @@ We will account for potential confounders that could influence both mental healt
 
 The following DAG illustrates the hypothesized causal relationships in the study:
 
-```{r fig.cap="Directed Acyclic Graph of Exercise and Mental Health Outcomes"}
 ![DAG of Exercise and Mental Health](figures/MHdag.png)
+
+
+#### Here are all paths connecting Exercise to Depression/Anxiety:
+
+Exercise → Depression/Anxiety
+
+Exercise ← Age → Depression/Anxiety
+
+Exercise ← Age → Conditions ← Gender → Depression/Anxiety
+
+Exercise ← Age → Conditions ← Gender → Genetic Predisposition → Depression/Anxiety
+
+Exercise ← Age → Conditions → Depression/Anxiety
+
+Exercise ← Age → Conditions → Medication ← SES → Depression/Anxiety
+
+Exercise ← Age → Conditions → Medication ← SES → Therapy → Depression/Anxiety
+
+Exercise ← Age → Conditions → Medication ← Therapy ← SES → Depression/Anxiety
+
+Exercise ← Age → Conditions → Medication ← Therapy → Depression/Anxiety
+
+Exercise ← Age → Conditions → Medication → Depression/Anxiety
+
+Exercise ← Age → Conditions → Therapy ← SES → Depression/Anxiety
+
+Exercise ← Age → Conditions → Therapy ← SES → Medication → Depression/Anxiety
+
+Exercise ← Age → Conditions → Therapy → Depression/Anxiety
+
+Exercise ← Age → Conditions → Therapy → Medication ← SES → Depression/Anxiety
+
+Exercise ← Age → Conditions → Therapy → Medication → Depression/Anxiety
+
+Exercise ← SES → Depression/Anxiety
+
+Exercise ← SES → Medication ← Conditions ← Age → Depression/Anxiety
+
+Exercise ← SES → Medication ← Conditions ← Gender → Depression/Anxiety
+
+Exercise ← SES → Medication ← Conditions ← Gender → Genetic Predisposition → Depression/Anxiety
+
+Exercise ← SES → Medication ← Conditions → Depression/Anxiety
+
+Exercise ← SES → Medication ← Conditions → Therapy → Depression/Anxiety
+
+Exercise ← SES → Medication ← Therapy ← Conditions ← Age → Depression/Anxiety
+
+Exercise ← SES → Medication ← Therapy ← Conditions ← Gender → Depression/Anxiety
+
+Exercise ← SES → Medication ← Therapy ← Conditions ← Gender → Genetic Predisposition → Depression/Anxiety
+
+Exercise ← SES → Medication ← Therapy ← Conditions → Depression/Anxiety
+
+Exercise ← SES → Medication ← Therapy → Depression/Anxiety
+
+Exercise ← SES → Medication → Depression/Anxiety
+
+Exercise ← SES → Therapy ← Conditions ← Age → Depression/Anxiety
+
+Exercise ← SES → Therapy ← Conditions ← Gender → Depression/Anxiety
+
+Exercise ← SES → Therapy ← Conditions ← Gender → Genetic Predisposition → Depression/Anxiety
+
+Exercise ← SES → Therapy ← Conditions → Depression/Anxiety
+
+Exercise ← SES → Therapy ← Conditions → Medication → Depression/Anxiety
+
+Exercise ← SES → Therapy → Depression/Anxiety
+
+Exercise ← SES → Therapy → Medication ← Conditions ← Age → Depression/Anxiety
+
+Exercise ← SES → Therapy → Medication ← Conditions ← Gender → Depression/Anxiety
+
+Exercise ← SES → Therapy → Medication ← Conditions ← Gender → Genetic Predisposition → Depression/Anxiety
+
+Exercise ← SES → Therapy → Medication ← Conditions → Depression/Anxiety
+
+Exercise ← SES → Therapy → Medication → Depression/Anxiety
+
+Exercise ← Conditions ← Age → Depression/Anxiety
+
+Exercise ← Conditions ← Gender → Depression/Anxiety
+
+Exercise ← Conditions ← Gender → Genetic Predisposition → Depression/Anxiety
+
+Exercise ← Conditions → Depression/Anxiety
+
+Exercise ← Conditions → Medication ← SES → Depression/Anxiety
+
+Exercise ← Conditions → Medication ← SES → Therapy → Depression/Anxiety
+
+Exercise ← Conditions → Medication ← Therapy ← SES → Depression/Anxiety
+
+Exercise ← Conditions → Medication ← Therapy → Depression/Anxiety
+
+Exercise ← Conditions → Medication → Depression/Anxiety
+
+Exercise ← Conditions → Therapy ← SES → Depression/Anxiety
+
+Exercise ← Conditions → Therapy ← SES → Medication → Depression/Anxiety
+
+Exercise ← Conditions → Therapy → Depression/Anxiety
+
+Exercise ← Conditions → Therapy → Medication ← SES → Depression/Anxiety
+
+Exercise ← Conditions → Therapy → Medication → Depression/Anxiety
+
+
+#### Based on these paths, we can determine the following:
+
+- **Age**: ADJUST; affects exercise and depression/anxiety via multiple paths and appears as a common cause 
+
+- **Gender**: ADJUST; affects exercise and depression/anxiety via multiple paths and appears as a common cause via a pipe
+
+- **SES**: ADJUST; common cause of both exercise and depression/anxiety
+
+- **Pre-existing Conditions**: ADJUST; common cause of both exercise and depression/anxiety
+
+- **Therapy**: DO NOT adjust; collider in paths like Conditions → Therapy ← SES; adjusting would open an unintended path
+
+- **Medication**: DO NOT adjust; collider in paths like Conditions → Medication ← SES; adjusting would open an unintended path
+
+- **Genetic Predisposition**: DO NOT adjust; collider in paths like Gender → Genetic Predisposition ← Depression/Anxiety; adjusting would open an unintended path
+
+#### Final Adjustment Set: { Age, Gender, SES, Pre-existing Conditions }
 
 
 ## Project Organization

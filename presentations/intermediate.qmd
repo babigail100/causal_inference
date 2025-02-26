@@ -1,7 +1,6 @@
 ---
 title: "Impact of Exercise on Depression/Anxiety"
 author: "Abby Brown"
-date: "`r Sys.Date()`"
 format:
   revealjs:
     theme: solarized

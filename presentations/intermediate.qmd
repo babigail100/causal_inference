@@ -1,0 +1,56 @@
+---
+title: "Impact of Exercise on Depression/Anxiety"
+author: "Abby Brown"
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+    transition: fade
+---
+
+## What’s the project about?
+- Does regular exercise reduce symptoms of depression and anxiety in individuals diagnosed with mental health conditions?
+- Why is this important?
+    - Poor mental health -> workplace absenteeism/reduced productivity
+    - Companies can invest in wellness programs to improve employee well-being
+
+---
+
+## Variables
+
+- **Mental health outcomes:** scores for depression and anxiety
+- **Exercise behavior:** frequency, duration, and/or intensity (light, moderate, vigorous)
+- **Demographics:** Age, gender, socioeconomic status (SES)
+- **Baseline health:** Pre-existing conditions, genetic predisposition
+- **Treatment factors:** Medication use, therapy involvement
+
+---
+
+# DAG
+
+---
+
+## Conclusions
+- **Adjust for** age (multiple path appearances), gender (pipe), SES (common cause), pre-existing conditions (common cause)
+- **Do not adjust for** therapy, medication, genetic predisposition (colliders)
+
+---
+
+## Data Source
+
+- Self-reported survey data (convenience)
+- Questions:
+    - <span style="font-size: smaller;">**On average, how many minutes of exercise do you do per day?**<span>
+    - <span style="font-size: smaller;">**What type(s) of exercise do you participate in regularly?**<span>
+    - <span style="font-size: smaller;">**What is your age/gender/SES?**<span>
+    - <span style="font-size: smaller;">**What physical conditions do you currently experience?**<span>
+    - <span style="font-size: smaller;">**Do you have diagnosed depression/anxiety?**<span>
+        - <span style="font-size: smaller;">could be replaced with questions from common depression/anxiety screeners<span>
+
+---
+
+## Next Steps
+- Create/execute survey
+- EDA
+- Attempt to reveal causality
+

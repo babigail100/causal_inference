@@ -1,0 +1,106 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Impact of Exercise on Depression/Anxiety\"\n",
+        "author: \"Abby Brown\"\n",
+        "date: \"`r Sys.Date()`\"\n",
+        "format:\n",
+        "  revealjs:\n",
+        "    theme: solarized\n",
+        "    slide-number: true\n",
+        "    transition: fade\n",
+        "---\n",
+        "\n",
+        "\n",
+        "## What’s the project about?\n",
+        "- Does regular exercise reduce symptoms of depression and anxiety in individuals diagnosed with mental health conditions?\n",
+        "- Why is this important?\n",
+        "    - Poor mental health -> workplace absenteeism/reduced productivity\n",
+        "    - Companies can invest in wellness programs to improve employee well-being\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## Variables\n",
+        "\n",
+        "- **Mental health outcomes:** scores for depression and anxiety\n",
+        "- **Exercise behavior:** frequency, duration, and/or intensity (light, moderate, vigorous)\n",
+        "- **Demographics:** Age, gender, socioeconomic status (SES)\n",
+        "- **Baseline health:** Pre-existing conditions, genetic predisposition\n",
+        "- **Treatment factors:** Medication use, therapy involvement\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## DAG"
+      ],
+      "id": "71d09830"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "import matplotlib.image as mpimg\n",
+        "\n",
+        "# Load image\n",
+        "img_path = r\"C:\\Users\\babig\\OneDrive\\Documents\\GitHub\\causal_inference\\figures\\MHdag.png\"\n",
+        "img = mpimg.imread(img_path)\n",
+        "\n",
+        "# Display image\n",
+        "plt.figure(figsize=(8, 6))\n",
+        "plt.imshow(img)\n",
+        "plt.axis(\"off\")  # Hide axes\n",
+        "plt.show()"
+      ],
+      "id": "10aceaff",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "\n",
+        "## Conclusions\n",
+        "- **Adjust for** age (multiple path appearances), gender (pipe), SES (common cause), pre-existing conditions (common cause)\n",
+        "- **Do not adjust for** therapy, medication, genetic predisposition (colliders)\n",
+        "\n",
+        "---\n",
+        "\n",
+        "\n",
+        "## Data Source\n",
+        "\n",
+        "- Self-reported survey data (convenience)\n",
+        "- Questions:\n",
+        "    - **On average, how many minutes of exercise do you do per day?**\n",
+        "    - **What type(s) of exercise do you participate in regularly?**\n",
+        "    - **What is your age/gender/SES?**\n",
+        "    - **What physical conditions do you currently experience?**\n",
+        "    - **Do you have diagnosed depression/anxiety?**\n",
+        "        - could be replaced with questions from common depression/anxiety screeners\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## Next Steps\n",
+        "- Create/execute survey\n",
+        "- EDA\n",
+        "- Attempt to reveal causality\n"
+      ],
+      "id": "cdbd087e"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\babig\\anaconda3\\envs\\env_5610\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

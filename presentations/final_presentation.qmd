@@ -1,0 +1,139 @@
+---
+title: "Impact of Exercise on Depression/Anxiety"
+author: "Abby Brown"
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+    transition: fade
+---
+
+## What’s the project about?
+- Does regular exercise reduce symptoms of depression and anxiety in individuals diagnosed with mental health conditions?
+- Why is this important?
+    - Poor mental health -> workplace absenteeism/reduced productivity
+    - Companies can invest in wellness programs to improve employee well-being
+
+---
+
+## Variables
+
+- **Mental health outcomes:** scores for depression and anxiety
+- **Exercise behavior:** frequency, duration, and/or intensity (light, moderate, vigorous)
+- **Demographics:** Age, gender, socioeconomic status (SES)
+- **Baseline health:** Pre-existing conditions, genetic predisposition
+- **Treatment factors:** Medication use, therapy involvement
+
+---
+
+## DAG
+
+![](figures/MHdag.png)
+
+---
+
+## Identification Strategy
+
+- **Adjust for:**  
+  - Age (appears on multiple paths)  
+  - Gender (pipe)  
+  - SES (common cause)  
+  - Pre-existing conditions (common cause)  
+- **Do not adjust for:**  
+  - Therapy, medication, genetic predisposition (colliders)
+
+---
+
+## Data Source
+
+- Self-reported survey data (convenience) of 49 participants
+
+Variables:
+
+- *exercise_score*: composite score of duration, intensity, frequency, regularity of exercise
+
+- *age*: age in years
+
+- *ses*: combined income category (low vs high) and gym/rec center subscription status (ordinal 1-3; low, medium, high)
+
+- *pec_severity*: severity of pre-existing physical conditions (ordinal 0-2; no pre-existing conditions, conditions moderately impacting exercise habits, conditions severely impacting exercise capabilities)
+
+- *gender*: female = 0, male = 1
+
+- *mh_score*: composite score of official diagnosis, unofficial diagnosis, and symptom frequency
+
+---
+
+## EDA: Variable Distributions
+
+![](figures/combined_distributions.png)
+
+---
+
+## EDA: Correlation Matrix
+
+![](figures/correlation_matrix.png)
+
+---
+
+## EDA: Exercise vs Mental Health (by Gender)
+
+![](figures/by_gender_scatter.png)
+
+---
+
+## EDA: Exercise vs Mental Health (by Pre-existing Conditions)
+
+![](figures/by_pec_scatter.png)
+
+---
+
+## EDA: Exercise vs Mental Health (by SES)
+
+![](figures/by_ses_scatter.png)
+
+---
+
+## Estimating Causal Effects
+
+- Approach: Bayesian linear regression using PyMC
+- Priors: weakly informative
+    - α ~ N(0, 1): MH score ~0 when other variables = 0  
+    - β ~ N(0, 1): Effects assumed small, centered at 0  
+    - σ ~ HalfNormal(1): Noise is positive, ~1
+- Treatment of interest: exercise (*exercise_score*)
+- Outcome: mental health (*mh_score*)
+
+---
+
+## Prior/Posterior Checks
+
+![](figures/prior_predictive.png)  
+![](figures/posterior_predictive.png)
+
+---
+
+## Posterior Estimates
+
+![](figures/forest_plot.png)
+
+---
+
+## Posterior Estimates
+
+| Coefficient | Variable         | Mean   | 2.5% HDI | 97.5% HDI |
+|-------------|------------------|--------|----------|-----------|
+| beta[0]     | exercise_score   | -0.357 | -0.698   | -0.019    |
+| beta[1]     | age              | 0.015  | -0.029   | 0.054     |
+| beta[2]     | ses              | 0.038  | -0.333   | 0.421     |
+| beta[3]     | pec_severity     | 0.341  | -0.092   | 0.755     |
+| beta[4]     | gender (Male)    | -0.494 | -0.982   | -0.044    |
+
+---
+
+## Other Considerations
+
+- **Difference-in-Differences (DiD)**: Applicable in principle, but not with the current data due to the absence of pre/post-treatment groups and no time-based structure to track change. 
+- **Matching Strategy**: Could apply if we had a larger dataset, especially where randomization is not feasible in this context. The dataset used in this project is too small and does not have a clearly defined treatment.
+- **Regression Discontinuity**: Not applicable here, as there is no clear cutoff or threshold determining exercise treatment. However, in the same context, age 18 could be considered an exercise threshold because academic requirements to attend physical education classes are lifted, but this threshold leads to superfluous confounders relating to high school graduation.
+

@@ -38,7 +38,7 @@ with basic:
 #have we recovered parameters?
 az.summary(idata,round_to=2)
 
-#visualize marginal posterios
+#visualize marginal posteriors
 az.plot_trace(idata,combined=True) #gives both
 
 
